@@ -1,6 +1,6 @@
 # Simple-DQN-Pytorch
 
-This is a simplistic implemetation of DQN that works under CartPole-v0 with __rendered pixels__ as input. It extends the implementation of pytorch's official DQN tutorial (which doesn't actually work) [https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html).
+This is a simplistic implementation of DQN that works under CartPole-v0 with __rendered pixels__ as input. It extends the implementation of pytorch's official DQN tutorial (which doesn't actually work) [https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html](https://pytorch.org/tutorials/intermediate/reinforcement_q_learning.html).
 
 It's tuned specifically for CartPole-v0 and will possibly fail for other tasks.
 
@@ -8,15 +8,15 @@ It's tuned specifically for CartPole-v0 and will possibly fail for other tasks.
 
 * pytorch 1.0+
 * torchvision
-* openai gym
+* OpenAI gym
 * matplotlib
 * Pillow
 
 ## Performance
 
-Due to the randomness of the DQN algorithm (random trainging samples & random network initialization), the training is not deterministic. You may have to restart a few times to get a satisfying result.
+Due to the randomness of the DQN algorithm (random training samples & random network initialization), the training is not deterministic. You may have to restart a few times to get a satisfying result.
 
-The following 3 experiment results came from the same set of hyperparameters:
+The following 3 experiment results came from the same set of hyper parameters:
 
 | Trial | Max reward | Max 100-mean | Total episodes | Solved after (episodes) |
 | ----- | ---------- | ------------ | -------------- | ----------------------- |
@@ -26,7 +26,7 @@ The following 3 experiment results came from the same set of hyperparameters:
 
 *The last column indicates when the 100-mean reached 200.*
 
-![image not availabel](preprocess.png)
+![image not available](preprocess.png)
 
 Last 300 episode history of training:
 
@@ -50,13 +50,13 @@ Last 300 episode history of training:
   * flatten: simply reshape all pixels from conv output
   * output: fully connect flattened features to produce 1 output for Value and 2 outputs for Advantage
 * Double DQN
-* Dueling DQN
+* Duelling DQN
 * Prioritized replay memory
-* Adam optimizaer
+* Adam optimizer
 * MSE loss
-* Seperate render thread
+* Separate render thread
 
-### Hyperparameters
+### Hyper-parameters
 
 | Parameter | Value |
 | --------- | ----- |
